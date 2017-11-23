@@ -1,0 +1,128 @@
+body {
+    background: #F5F5DC;
+    height: 100%;
+    width: 100%;
+    padding: 1vmin;
+}
+
+header {
+    height: 12vmin;
+    width: 100vw;
+    background: radial-gradient(#F5F5DC, #696969);
+    border-radius: 2vmin;
+    padding: 2vmin;
+    box-shadow: 0 0 10px #696969;
+}
+
+.number {
+    color: #000000;
+    float: right;
+    font-size: 5vmin;
+    padding-right: 10vmin;
+    margin-top: 2vmin;
+}
+
+.number:before {
+    font-family: "untitled-font-1";
+    content: "e ";
+}
+
+.squard {
+    height: 5vmin;
+
+    position: absolute;
+    text-align: center;
+    width: 5vmin;
+    display: inline-block;
+    margin-left: 5vmin;
+}
+
+.top {
+    background: #ffffff;
+    transform: rotate(-45deg) skew(15deg, 15deg);
+
+}
+
+.left {
+    border: 1vmin solid #000000;
+    background: #ffffff;
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+
+.right {
+    margin-top: 2vmin;
+    background: #ffffff;
+    transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+
+
+
+.nav {
+    position: absolute;
+    left: 30vmin;
+    font-size: 3.5vmin;
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+}
+
+
+li {
+
+    /*убираем подчеркивание текста ссылок*/
+    /*добавляем фон к пункту меню*/
+    color: #000000;
+    /*меняем цвет ссылок*/
+    padding: 0px 15px;
+    /*добавляем отступ*/
+    font-family: Helvetica, sans-serif;
+    /*меняем шрифт*/
+    line-height: 50px;
+    /*ровняем меню по вертикали*/
+    display: block;
+    border-right: 1px solid #808080;
+    /*добавляем бордюр справа*/
+    -moz-transition: all 0.3s 0.01s ease;
+    /*делаем плавный переход*/
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    float: left;
+    /*Размещаем список горизонтально для реализации меню*/
+    position: relative;
+    /*задаем позицию для позиционирования*/
+}
+
+li:hover {
+    background: #696969;
+    color: #ffffff;
+    /*добавляем эффект при наведении*/
+}
+
+
+
+/*Стили для скрытого выпадающего меню*/
+
+.menu {
+
+    position: absolute;
+    top: 45px;
+    display: none;
+    background-color: #696969;
+
+
+
+}
+
+/*Делаем скрытую часть видимой*/
+
+li:hover>ul {
+
+    display: block;
+    width: 250px;
+    /*Задаем ширину выпадающего меню*/
+}
+
+li:hover>ul>li {
+    float: none;
+    /*Убираем горизонтальное позиционирование*/
+}
