@@ -20,16 +20,15 @@ body {
     -webkit-box-shadow: inset 0 0 50px #c0c0c0;
     box-shadow: inset 0 0 50px #c0c0c0;
     max-width: 1500px;
-    padding: 0 5vmin 0 5vmin;
-    width: calc(100% - 10vmin);
+    padding: 0 20px 0 20px;
+    width: calc(100% - 40px);
 }
 
 .name {
     text-transform: capitalize;
     display: inline-block;
-    margin-bottom: 4vmin;
-    font: 8vmin "Trebuchet MS", Arial, sans-serif;
-
+    margin-bottom: 10px;
+    font: 50px "Komoda", Arial, sans-serif;
 }
 
 span {
@@ -38,7 +37,7 @@ span {
 
 .number {
     float: right;
-    font: 5vmin "trebuchet ms", Helvetica, sans-serif;
+    font: 30px "trebuchet ms", Helvetica, sans-serif;
     margin: .3em 0 0 1em;
     -webkit-transition: font-size 2s, margin-top 2s, -webkit-transform 2s;
     /*добавляем анимирование номеру*/
@@ -60,7 +59,7 @@ span {
 /*анимирование номера при наведении курсора на шапку сайта*/
 
 .header:hover .number {
-    font-size: 5.7vmin;
+    font-size: 40px;
     -webkit-transform: translateX(-20px);
     -ms-transform: translateX(-20px);
     transform: translateX(-20px);
@@ -77,17 +76,14 @@ li {
     background-color: #f5f5f5;
     /*указываем сплошной цвет для IE9 */
     background: -webkit-radial-gradient(#f5f5f5, #dcdcdc);
-
     background: -o-radial-gradient(#f5f5f5, #dcdcdc);
-
     background: radial-gradient(#f5f5f5, #dcdcdc);
-
     -webkit-box-shadow: inset 0 0 10px #d3d3d3;
     box-shadow: inset 0 0 10px #d3d3d3;
     display: inline-block;
     /*располагаем элементы списка в строку*/
-    font-size: 4vmin;
-    padding: 1vmin;
+    font-size: 25px;
+    padding: 8px;
     text-align: center;
     width: 15%;
 }
@@ -131,7 +127,6 @@ li:hover {
 .sub-menu li {
     width: 100%;
     text-align: left;
-    font-size: 4vmin;
 }
 
 /*показывать меню при наведении курсора на родительский элемент*/
@@ -161,11 +156,11 @@ li:hover>.sub-menu {
 
 p {
     color: #fff;
-    font: 4vmin "Century Gothic", Helvetica, sans-serif;
+    font: 20px "Century Gothic", Helvetica, sans-serif;
     font-style: italic;
     margin: auto;
     text-align: center;
-    width: 90%;
+    width: 80%;
 
 }
 
@@ -175,8 +170,6 @@ p {
     float: left;
     margin: 2% 0 0 13.3%;
     width: 30%;
-
-
 }
 
 #sale:hover img,
@@ -198,77 +191,50 @@ form {
 
 form>p {
     color: #ff8c00;
-    font: normal 8vmin;
-    font-weight: bolder;
+    font-size: 30px;
     text-transform: uppercase;
-
+    font-style: normal;
 }
 
 input {
     background-color: #f5f5f5;
-    font-size: 4vmin;
-    margin: 1vmin 2vmin;
+    font-size: 24px;
+    margin: 8px 16px;
 
 }
 
-/* свойства кнопки "оформить"*/
+/* свойства кнопки "оформить" */
 
 [type=submit] {
     background-color: #D2691E;
     border-color: #a0522d;
     color: #fff;
-    font: 5vmin "trebuchet ms", arial, sans-serif;
-    font-weight: bolder;
-    padding: 1vmin;
+    font: 30px "trebuchet ms", arial, sans-serif;
+    padding: 2px 50px;
     text-transform: uppercase;
-}
-
-#pay:after {
-    font-family: "untitled-font-1";
-    content: "p";
 
 }
 
-#seal:after {
-    font-family: "untitled-font-1";
-    content: " l";
-
-}
-
-
-#service:after {
-    font-family: "untitled-font-1";
-    content: "i ";
-
-}
-
-#pay:after,
-#seal:after,
-#service:after {
-    color: #D2691E;
-    opacity: 0.7;
-    font-size: 20vmin;
-    border-radius: 50%;
-    background-color: #f5f5f5;
-
-}
+/* задаем свойства блокам (рассрочка, гарания, срок службы) */
 
 .content h1 {
     color: #fff;
+    font-size: 24px;
     text-transform: uppercase;
-    font-size: 4vmin;
+
 }
 
 .content div:nth-of-type(4),
 div:nth-of-type(6),
 div:nth-of-type(5) {
     display: inline-block;
-    width: 27%;
     font-family: "Century Gothic", Helvetica, arial, sans-serif;
-    text-align: center;
     padding: 1em;
-    font-size: 2vmin;
+    text-align: center;
+    width: 27%;
 }
+
+/* позиционируем блоки рассрока, гарантия, срок слуюбы */
 
 .content div:nth-of-type(4) {
     float: left;
@@ -282,20 +248,66 @@ div:nth-of-type(5) {
     float: right;
 }
 
+/*добавляем инонку к каждому блоку*/
+
+#pay:after {
+    font-family: "untitled-font-1";
+    content: "p";
+
+}
+
+#seal:after {
+    font-family: "untitled-font-1";
+    content: " l";
+
+}
+
+#service:after {
+    font-family: "untitled-font-1";
+    content: "i ";
+
+}
+
+/*задаем свойства иконкам */
+
+#pay:after,
+#seal:after,
+#service:after {
+    color: #D2691E;
+    font-size: 120px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    opacity: 0.7;
+}
+
+/* убираем пустую строку между контентом и подвалом*/
+
 #clear {
     clear: both;
 }
 
+/* задаем свойства подвалу*/
+
 footer {
-    width: calc(100% - 10vmin);
-    max-width: 1500px;
-    margin: auto;
+    background-color: #f5f5f5;
+    /*указываем сплошной цвет для IE9 */
+    background: -webkit-radial-gradient(#f5f5f5, #dcdcdc);
+
+
+    background: -o-radial-gradient(#f5f5f5, #dcdcdc);
+
+
     background: radial-gradient(#f5f5f5, #dcdcdc);
-    padding: 0 5vmin 0 5vmin;
+    border-bottom: 10px solid #D2691E;
+    -webkit-box-shadow: inset 0 0 50px #c0c0c0;
     box-shadow: inset 0 0 50px #c0c0c0;
     color: #000;
-    font-family: Helvetica, sans-serif;
-    border-bottom: 10px solid #D2691E;
+    font-family: "trebuchet ms", Helvetica, sans-serif;
+    margin: auto;
+    max-width: 1500px;
+    padding: 0 20px 0 20px;
+    width: calc(100% - 40px);
+
 }
 
 footer>.name {
@@ -303,8 +315,8 @@ footer>.name {
 }
 
 #mail {
-    font-size: 4vmin;
-    margin: 2vmin 0;
+    font-size: 25px;
+    margin: 5px 0;
 }
 
 #mail:before {
@@ -312,218 +324,17 @@ footer>.name {
     content: "f ";
 }
 
+/*убираем анимирование тел.номера при наведении курсора*/
+
 footer>.number:hover {
-    transition: none;
+    font-size: 30px;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
-    font-size: 5vmin;
-}
-
-
-
-@media screen and (max-width: 480px) {
-    .number {
-        float: none;
-        margin: 0;
-    }
-    .header:hover .number {
-        transform: none;
-        transition: none;
-    }
-    .content div p {
-        width: 50%;
-
-        margin-top: 18%;
-    }
-    .content div:nth-of-type(4),
-    div:nth-of-type(6),
-    div:nth-of-type(5) {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-    .content div:nth-of-type(5) {
-        margin-left: 0;
-    }
-    #pay,
-    #seal,
-    #service {
-        margin-left: 2%;
-        width: 40%;
-        float: left;
-
-    }
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
 
 
 }
 
-
-@media screen and (max-width: 760px) {
-    .name {
-        margin-left: 1em;
-    }
-    .number {
-        margin-right: 0;
-    }
-    .header:hover .number {
-        transform: none;
-        transition: none;
-        font-size: 5vmin;
-    }
-    li {
-        margin-left: 0;
-        display: block;
-        width: 40%;
-        font-size: 3vmin;
-    }
-    ul.nav {
-        margin-left: 0;
-    }
-    ul.sub-menu {
-        margin-left: 36%;
-        margin-top: -6.5vmin;
-    }
-    .sub-menu li {
-        font-size: 3vmin;
-    }
-    p {
-        margin: auto;
-        font-size: 2.5vmin;
-    }
-    #sale img,
-    #new img {
-        display: block;
-        width: 70%;
-    }
-
-    form {
-        display: block;
-        width: 50%;
-        margin: 10em auto 1em;
-
-    }
-
-    .content div:nth-of-type(4),
-    div:nth-of-type(6),
-    div:nth-of-type(5) {
-        padding: 0;
-    }
-    footer>.number {
-        float: none;
-        margin: 0;
-    }
-}
-
-
-@media screen and (min-width: 1500px) {
-    .name {
-        font-size: 4vmin;
-        margin-left: .1em;
-    }
-    .number {
-        font-size: 2.5vmin;
-        margin: .3em 0;
-    }
-    .header:hover .number {
-        font-size: 3vmin;
-        transform: translateX(-20px);
-    }
-    li,
-    .sub-menu li {
-        margin: auto;
-        padding: .5vmin;
-        font-size: 2vmin;
-    }
-    p {
-        font-size: 2vmin;
-    }
-    .content h1 {
-        font-size: 2vmin;
-    }
-    .content div:nth-of-type(4),
-    div:nth-of-type(5),
-    div:nth-of-type(6) {
-        padding: 0;
-        margin: .3em;
-
-    }
-    #mail {
-        font-size: 2vmin;
-        margin: .3em 0;
-    }
-    form>p {
-        font-size: 2vmin;
-        padding: .3em;
-    }
-
-    input {
-        margin: 0 .5em;
-        font-size: 2vmin;
-    }
-
-    .pay:after {
-        font-size: 5vmin;
-    }
-
-    .seal:after {
-        font-size: 5vmin;
-    }
-
-    .service:after {
-        font-size: 5vmin;
-    }
-
-
-
-    form>p {
-        font: 4vmin;
-
-
-    }
-
-    input {
-
-        font-size: 2vmin;
-        margin: .3vmin .6vmin;
-
-    }
-    [type=submit] {
-
-        font-size: 3vmin;
-        padding: .5vmin;
-
-    }
-
-    #pay:after,
-    #seal:after,
-    #service:after {
-        font-size: 8vmin;
-
-
-    }
-    .content h1 {
-
-        font-size: 2vmin;
-    }
-
-
-    footer {
-        padding: 0 1vmin 0 1vmin;
-        width: calc(100% - 2vmin);
-
-    }
-
-    footer>.name {
-        margin: 0;
-    }
-
-    #mail {
-        font-size: 2vmin;
-        margin: 2vmin 0;
-    }
-
-    #mail:before {
-        font-family: "untitled-font-1";
-        content: "f ";
-    }
-
-}
