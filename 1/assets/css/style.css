@@ -338,3 +338,212 @@ footer>.number:hover {
 
 }
 
+
+
+@media screen and (max-width: 480px) {
+    .number {
+        float: none;
+        margin: 0;
+    }
+    .header:hover .number {
+        transform: none;
+        transition: none;
+    }
+    .content div p {
+        width: 50%;
+
+        margin-top: 18%;
+    }
+    .content div:nth-of-type(4),
+    div:nth-of-type(6),
+    div:nth-of-type(5) {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .content div:nth-of-type(5) {
+        margin-left: 0;
+    }
+    #pay,
+    #seal,
+    #service {
+        margin-left: 2%;
+        width: 40%;
+        float: left;
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 760px) {
+    .name {
+        margin-left: 1em;
+    }
+    .number {
+        margin-right: 0;
+    }
+    .header:hover .number {
+        transform: none;
+        transition: none;
+        font-size: 5vmin;
+    }
+    li {
+        margin-left: 0;
+        display: block;
+        width: 40%;
+        font-size: 3vmin;
+    }
+    ul.nav {
+        margin-left: 0;
+    }
+    ul.sub-menu {
+        margin-left: 36%;
+        margin-top: -6.5vmin;
+    }
+    .sub-menu li {
+        font-size: 3vmin;
+    }
+    p {
+        margin: auto;
+        font-size: 2.5vmin;
+    }
+    #sale img,
+    #new img {
+        display: block;
+        width: 70%;
+    }
+
+    form {
+        display: block;
+        width: 50%;
+        margin: 10em auto 1em;
+
+    }
+
+    .content div:nth-of-type(4),
+    div:nth-of-type(6),
+    div:nth-of-type(5) {
+        padding: 0;
+    }
+    footer>.number {
+        float: none;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 1500px) {
+    .name {
+        font-size: 4vmin;
+        margin-left: .1em;
+    }
+    .number {
+        font-size: 2.5vmin;
+        margin: .3em 0;
+    }
+    .header:hover .number {
+        font-size: 3vmin;
+        transform: translateX(-20px);
+    }
+    li,
+    .sub-menu li {
+        margin: auto;
+        padding: .5vmin;
+        font-size: 2vmin;
+    }
+    p {
+        font-size: 2vmin;
+    }
+    .content h1 {
+        font-size: 2vmin;
+    }
+    .content div:nth-of-type(4),
+    div:nth-of-type(5),
+    div:nth-of-type(6) {
+        padding: 0;
+        margin: .3em;
+
+    }
+    #mail {
+        font-size: 2vmin;
+        margin: .3em 0;
+    }
+    form>p {
+        font-size: 2vmin;
+        padding: .3em;
+    }
+
+    input {
+        margin: 0 .5em;
+        font-size: 2vmin;
+    }
+
+    .pay:after {
+        font-size: 5vmin;
+    }
+
+    .seal:after {
+        font-size: 5vmin;
+    }
+
+    .service:after {
+        font-size: 5vmin;
+    }
+
+
+
+    form>p {
+        font: 4vmin;
+
+
+    }
+
+    input {
+
+        font-size: 2vmin;
+        margin: .3vmin .6vmin;
+
+    }
+    [type=submit] {
+
+        font-size: 3vmin;
+        padding: .5vmin;
+
+    }
+
+    #pay:after,
+    #seal:after,
+    #service:after {
+        font-size: 8vmin;
+
+
+    }
+    .content h1 {
+
+        font-size: 2vmin;
+    }
+
+
+    footer {
+        padding: 0 1vmin 0 1vmin;
+        width: calc(100% - 2vmin);
+
+    }
+
+    footer>.name {
+        margin: 0;
+    }
+
+    #mail {
+        font-size: 2vmin;
+        margin: 2vmin 0;
+    }
+
+    #mail:before {
+        font-family: "untitled-font-1";
+        content: "f ";
+    }
+
+}
