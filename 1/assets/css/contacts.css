@@ -143,22 +143,20 @@ li:hover>.sub-menu {
 /*задаем свойства основной части -контенту */
 
 .content {
-    background-image: url(../img/bg1.jpg);
+    background-image: url(../img/bg2.jpg);
     border-top: 3px solid #D2691E;
     margin-top: 0;
-
 }
 
-.map {
-    width: 80%;
-    margin: auto;
+.contacts p {
+    color: #fff;
+    font-family: "Century Gothic", Arial, sans-serif;
+    margin-left: 2%;
+}
+iframe{
+    margin: 0 2% 2%;
 }
 
-.content p {
-    text-align: left;
-    text-transform: none;
-
-}
 
 footer {
     width: calc(100% - 10vmin);
