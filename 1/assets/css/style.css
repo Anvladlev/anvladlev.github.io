@@ -70,6 +70,7 @@ ul.nav {
     /*варавниваем меню по центру*/
     padding: 0;
     text-align: center;
+    margin-top: 8px;
 }
 
 li {
@@ -83,7 +84,7 @@ li {
     display: inline-block;
     /*располагаем элементы списка в строку*/
     font-size: 25px;
-    padding: 8px;
+    padding: 3px 8px;
     text-align: center;
     width: 15%;
 }
@@ -251,12 +252,12 @@ input {
 #pay div:after,
 #seal div:after,
 #service div:after {
-    font-size: 100px;
-    color: #d2691e;
-    opacity: 0.7;
-    border-radius: 50%;
     background-color: #f5f5f5;
+    border-radius: 50%;
+    color: #d2691e;
+    font-size: 100px;
     margin-left: 40%;
+    opacity: 0.7;
 }
 
 /* убираем пустую строку между контентом и подвалом*/
@@ -385,15 +386,19 @@ footer>.number:hover {
         font-size: 20px;
     }
     .header:hover .number {
+        -webkit-transform: none;
+        -ms-transform: none;
         transform: none;
+        -webkit-transition: none;
+        -o-transition: none;
         transition: none;
         font-size: 20px;
     }
     li {
-        margin-left: 0;
         display: block;
-        width: 40%;
         font-size: 20px;
+        margin-left: 0;
+        width: 40%;
     }
     ul.nav {
         margin-left: 0;
@@ -417,24 +422,24 @@ footer>.number:hover {
 
     form {
         display: block;
-        width: 50%;
         margin: 2em auto 1em;
-
+        width: 50%;
     }
     #pay,
     #seal,
     #service {
-        width: 100%;
         float: none;
+        width: 100%;
+
     }
 
     #pay p,
     #seal p,
     #service p {
         font-size: 20px;
+        margin: 0 10px 10px 20px;
         text-align: left;
         width: 100%;
-        margin: 0 10px 10px 20px;
 
     }
     #service p {
@@ -459,13 +464,16 @@ footer>.number:hover {
     }
     .header:hover .number {
         font-size: 60px;
+        -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
         transform: translateX(-20px);
     }
     li,
     .sub-menu li {
+        font-size: 30px;
         margin: auto;
         padding: 8px;
-        font-size: 30px;
+
     }
     p {
         font-size: 30px;
