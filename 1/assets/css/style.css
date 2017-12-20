@@ -1,10 +1,11 @@
 body {
     margin: 0;
     /* убрать отступ браузера*/
+    font-family: "Century Gothic", Arial, sans-serif;
 }
 
-.wrapper {
-    max-width: 1500px;
+wrapper {
+    max-width: 1800px;
     /*задаем максимальную ширину и выравниваем содержимое страницы по центру при отображении на больших экранах */
     margin: auto;
 }
@@ -20,24 +21,25 @@ body {
     -webkit-box-shadow: inset 0 0 50px #c0c0c0;
     box-shadow: inset 0 0 50px #c0c0c0;
     max-width: 1500px;
-    padding: 0 20px 0 20px;
-    width: calc(100% - 40px);
+    width: 100%;
 }
 
-.name {
+.header__name_text {
     text-transform: capitalize;
     display: inline-block;
-    margin: 0 0 10px 30px;
-    font: 50px "Komoda", Arial, sans-serif;
+    margin: 10px 0 5px 30px;
+    font-size: 50px;
+    text-shadow: -5px 5px 4px #a9a9a9;
+
 }
 
 span {
     color: #D2691E;
 }
 
-.number {
+.header__number_text {
     float: right;
-    font: 30px "trebuchet ms", Helvetica, sans-serif;
+    font-size: 25px;
     margin: .3em 0 0 1em;
     -webkit-transition: font-size 2s, margin-top 2s, -webkit-transform 2s;
     /*добавляем анимирование номеру*/
@@ -49,7 +51,7 @@ span {
 
 /*добавляем иконку "телефон"*/
 
-.number:before {
+.header__number_text:before {
     color: #D2691E;
     content: "e ";
     font-family: "untitled-font-1";
@@ -58,14 +60,14 @@ span {
 
 /*анимирование номера при наведении курсора на шапку сайта*/
 
-.header:hover .number {
-    font-size: 40px;
+.header:hover .header__number_text {
+    font-size: 30px;
     -webkit-transform: translateX(-20px);
     -ms-transform: translateX(-20px);
     transform: translateX(-20px);
 }
 
-ul.nav {
+ul.nav__ul {
     margin: auto;
     /*варавниваем меню по центру*/
     padding: 0;
@@ -93,7 +95,6 @@ li {
 
 li a {
     color: #000;
-    font-family: "Century Gothic", Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -108,7 +109,7 @@ li:hover {
 
 /*создание выпадающего списка*/
 
-.sub-menu {
+.nav__ul_item {
     background-color: #f5f5f5;
     /*указываем сплошной цвет для IE9 */
     background: -webkit-radial-gradient(#f5f5f5, #dcdcdc);
@@ -125,59 +126,194 @@ li:hover {
     width: 25%;
 }
 
-.sub-menu li {
+.nav__ul_item li {
     width: 100%;
     text-align: left;
 }
 
 /*показывать меню при наведении курсора на родительский элемент*/
 
-li:hover>.sub-menu {
+li:hover>.nav__ul_item {
     display: block;
 }
 
 /*задаем свойства основной части -контенту */
 
-.content {
-    background-image: url(../img/bg1.jpg);
-    border-top: 3px solid #D2691E;
-    margin-top: 0;
+#index__content {
+    background-image: url(../img/bg2.jpg);
+
 
 }
 
 /*слайдер*/
 
-.gallery img {
+.gallery {
+    margin: 0 auto;
     height: auto;
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+
 }
 
 /* задаем свойства всем абзацам*/
 
 p {
     color: #fff;
-    font: 20px "Century Gothic", Helvetica, sans-serif;
-    font-style: italic;
+    font-size: 20px;
+    /*  font-style: italic;*/
     margin: auto;
     text-align: center;
     width: 80%;
 
 }
 
-#sale img,
-#new img {
-    /*располагаем блоки в одну строку*/
-    float: left;
-    margin: 2% 0 0 13.3%;
-    width: 30%;
+.article_gradient {
+    margin: 50px 0 50px 0;
+    display: flex;
+    background: #f5f5f5;
+    background: linear-gradient(to right, #D2691E 0%, #D2691E 14.2857143%, #f5f5f5 14.2857143%, #f5f5f5 28.5714286%, #dcdcdc 28.5714286%, #dcdcdc 42.8571429%, #d3d3d3 42.8571429%, #d3d3d3 57.1428572%, #c0c0c0 57.1428572%, #c0c0c0 71.4285715%, #a9a9a9 71.4285715%, #a9a9a9 85.7142858%, #808080 85.7142858%, #808080 100%);
 }
 
-#sale:hover img,
-#new:hover img {
-    opacity: 0.5;
-    /*делаем полупрозрачным элемент при наведении курсора*/
+section {
+    color: #D2691E;
+    /*-webkit-box-shadow: inset 0 0 20px #dcdcdc;
+    box-shadow: inset 0 0 25px #dcdcdc;*/
+    width: calc(100% / 7);
+
 }
+
+h1 {
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+section>p {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    padding: 10px 0;
+}
+
+.article__section_1 {
+    background-color: #D2691E;
+}
+
+.article__section_2:before,
+.article__section_3:before,
+.article__section_4:before,
+.article__section_5:before,
+.article__section_6:before,
+.article__section_7:before {
+    font-size: 50px;
+}
+
+.article__section_2:before {
+    content: "D";
+    font-family: "untitled-font-1";
+}
+
+.article__section_3:before {
+    content: "I";
+    font-family: "untitled-font-1";
+}
+
+.article__section_4:before {
+    content: "J";
+    font-family: "untitled-font-1";
+}
+
+.article__section_5:before {
+    content: "G";
+    font-family: "untitled-font-1";
+}
+
+.article__section_6:before {
+    content: "F";
+    font-family: "untitled-font-1";
+}
+
+.article__section_7:before {
+    content: "E";
+    font-family: "untitled-font-1";
+}
+
+.carousel__title_center {
+    font-size: 50px;
+    text-align: center;
+}
+
+button {
+    font-size: 30px;
+    background-color: rgba(169, 169, 169, .7);
+    border-radius: 50%;
+    color: #fff;
+
+}
+
+.carousel__button_left:before {
+    content: "a";
+    font-family: "untitled-font-1";
+
+}
+
+.carousel__button_right:before {
+    content: "v";
+    font-family: "untitled-font-1";
+}
+
+figcaption {
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    /*делаем полупрозрачным элемент при наведении курсора*/
+    width: calc(88vw / 3);
+    margin: -320px 0 0 20px;
+    height: 300px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+/*
+.carousel__title:nth-of-type(1)::after,
+.carousel__title:nth-of-type(2)::after {
+    content: "B";
+    font-family: "untitled-font-1";
+    font-size: 50px;
+}
+*/
+
+.carousel__item:hover figcaption {
+    display: block;
+}
+
+.carousel {
+    width: 30%;
+    overflow: hidden;
+}
+
+.carousel__block {
+    width: 9999px;
+    overflow: hidden;
+    display: flex;
+}
+
+.carousel__item {}
+
+.carousel__item img {
+    /*    располагаем блоки в одну строку*/
+    flex-direction: row;
+    /*justify-content: center;*/
+    width: calc(1200px / 3);
+    height: 300px;
+    border: 20px solid #f5f5f5;
+    display: block;
+}
+
+
 
 /* задаем свойства форме */
 
@@ -200,7 +336,7 @@ form>p {
 input {
     background-color: #f5f5f5;
     font-size: 24px;
-    margin: 8px 16px;
+    margin: 12px 16px;
 
 }
 
@@ -210,7 +346,7 @@ input {
     background-color: #D2691E;
     border-color: #a0522d;
     color: #fff;
-    font: 30px "trebuchet ms", arial, sans-serif;
+    font: 30px "Century Gothic", arial, sans-serif;
     padding: 2px 50px;
     text-transform: uppercase;
 
@@ -218,52 +354,53 @@ input {
 
 /* задаем свойства блокам (рассрочка, гарания, срок службы) */
 
-.content h1 {
-    color: #fff;
-    font: 24px "trebuchet ms", arial, sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 /*добавляем после заголовка иконочное изображение*/
 
-#pay div:after {
-    content: " p";
+.article {
+    display: flex;
+    background: #f5f5f5;
+    width: 100%;
+    margin: auto;
+}
+
+.article__section2_1>h2:before {
+    content: "p ";
     font-family: "untitled-font-1";
 }
 
-#seal div:after {
-    content: " l";
+.article__section2_2>h2:before {
+    content: "l ";
     font-family: "untitled-font-1";
 }
 
-#service div:after {
-    content: " i";
+.article__section2_3>h2:before {
+    content: "i ";
     font-family: "untitled-font-1";
 }
 
-#pay,
-#seal,
-#service {
-    width: 33.3%;
-    float: left;
+.article__section2_1>h2:before,
+.article__section2_2>h2:before,
+.article__section2_3>h2:before {
+    color: #D2691E;
+    font-size: 40px;
 }
 
-#pay div:after,
-#seal div:after,
-#service div:after {
-    background-color: #f5f5f5;
-    border-radius: 50%;
-    color: #d2691e;
-    font-size: 100px;
-    margin-left: 40%;
-    opacity: 0.7;
+.article__section2_1,
+.article__section2_2,
+.article__section2_3 {
+    width: calc(100% / 3);
+    padding: 5px 0;
+    box-shadow: none;
+    border: 0px;
 }
 
-/* убираем пустую строку между контентом и подвалом*/
+h2 {
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
 
-#clear {
-    clear: both;
 }
 
 /* задаем свойства подвалу*/
@@ -278,235 +415,74 @@ footer {
 
 
     background: radial-gradient(#f5f5f5, #dcdcdc);
-    border-bottom: 10px solid #D2691E;
     -webkit-box-shadow: inset 0 0 50px #c0c0c0;
     box-shadow: inset 0 0 50px #c0c0c0;
     color: #000;
     font-family: "trebuchet ms", Helvetica, sans-serif;
     margin: auto;
-    max-width: 1500px;
+    max-width: 1800px;
     padding: 0 40px 0 40px;
     width: calc(100% - 80px);
 
 }
 
-footer>.name {
-    margin: 0;
+
+.footer__name_text {
+    font-size: 20px;
+    text-transform: capitalize;
 }
 
-#mail {
-    font-size: 25px;
+.footer__number_text {
+    font-size: 20px;
     margin: 10px 0;
 }
 
-#mail:before {
+#footer__mail {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+#footer__mail:before {
     font-family: "untitled-font-1";
     content: "f ";
 }
 
-/*убираем анимирование тел.номера при наведении курсора*/
-
-footer>.number:hover {
-    font-size: 30px;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-
-
-}
-
-
-/*создаем медиаусловие с максимальной шириной 480px */
-
 @media screen and (max-width: 480px) {
-    .name {
-        font-size: 40px;
-    }
-    .number {
+    .header__number_text {
         float: none;
-        margin: 0;
-        font-size: 20px;
-    }
-    .header:hover .number {
+        font-size: 30px;
         transform: none;
         transition: none;
-        font-size: 20px;
-    }
-    .content div p {
-        width: 50%;
-        margin-top: 18%;
     }
 
-    form {
-        display: block;
-        width: 100%;
-        margin: 1em auto 1em;
-
-    }
-
-    form>p {
-        font-size: 20px;
-        margin: 0;
-        width: 100%
-    }
-    input {
-        font-size: 18px;
-        margin: 5px 0;
-
-    }
-    #pay,
-    #seal,
-    #service {
-        width: 100%;
-        float: none;
-    }
-
-    #pay p,
-    #seal p,
-    #service p {
-        font-size: 20px;
-        text-align: left;
-        margin: 0 10px 10px 20px;
-
-    }
-}
-
-/*создаем медиазапрос с медиаусловием максимальная ширина 760px */
-
-@media screen and (max-width: 760px) {
-    .name {
-        margin-left: 1em;
-        font-size: 40px;
-    }
-    .number {
-        margin: 20px 0;
-        font-size: 20px;
-    }
-    .header:hover .number {
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none;
-        font-size: 20px;
-    }
-    li {
+    .nav__ul li {
         display: block;
         font-size: 20px;
-        margin-left: 0;
-        width: 40%;
-    }
-    ul.nav {
-        margin-left: 0;
-    }
-    ul.sub-menu {
-        margin-left: 36%;
-        margin-top: 0;
-    }
-    .sub-menu li {
-        font-size: 20px;
-    }
-    p {
-        margin: auto;
-        font-size: 20px;
-    }
-    #sale img,
-    #new img {
-        display: block;
-        width: 70%;
-    }
-
-    form {
-        display: block;
-        margin: 2em auto 1em;
-        width: 50%;
-    }
-    #pay,
-    #seal,
-    #service {
-        float: none;
         width: 100%;
-
+        padding: 0;
+    }
+    .nav__ul li:hover .nav__ul_item {
+        display: block;
+    }
+    .gallery {
+        width: 200px;
+        height: auto;
+    }
+    .carousel__block {
+        display: flex;
     }
 
-    #pay p,
-    #seal p,
-    #service p {
-        font-size: 20px;
-        margin: 0 10px 10px 20px;
-        text-align: left;
-        width: 100%;
+    .carousel__item img {
+        /*    располагаем блоки в столбец*/
+        flex-direction: column;
 
     }
-    #service p {
-        margin-bottom: 0;
+    .article_gradient {
+        display: flex;
     }
 
-    #mail {
-        font-size: 20px;
-    }
-}
-
-/*создаем медиаусловие с максимальной шириной 1500px */
-
-@media screen and (min-width: 1500px) {
-    .name {
-        font-size: 80px;
-        margin-left: .1em;
-    }
-    .number {
-        font-size: 50px;
-        margin: .3em 0;
-    }
-    .header:hover .number {
-        font-size: 60px;
-        -webkit-transform: translateX(-20px);
-        -ms-transform: translateX(-20px);
-        transform: translateX(-20px);
-    }
-    li,
-    .sub-menu li {
-        font-size: 30px;
-        margin: auto;
-        padding: 8px;
-
-    }
-    p {
-        font-size: 30px;
-    }
-    .content h1 {
-        font-size: 40px;
+    .article_gradient  {
+        flex-direction: column;
     }
 
-
-
-    #mail {
-        font-size: 20px;
-        margin: .3em 0;
-    }
-    form>p {
-        font-size: 40px;
-        padding: .3em;
-    }
-
-    input {
-        font-size: 20px;
-        margin: 0 .5em;
-    }
-    .content h1 {
-
-        font-size: 2vmin;
-    }
-    footer {
-        padding: 0 30px 0 30px;
-        width: calc(100% - 60px);
-    }
-
-    #mail {
-        font-size: 30px;
-    }
 }
