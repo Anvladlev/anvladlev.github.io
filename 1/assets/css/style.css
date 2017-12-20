@@ -147,18 +147,22 @@ li:hover>.nav__ul_item {
 
 /*слайдер*/
 
-.gallery {
+figure {
     margin: 0 auto;
+
+}
+
+img {
     height: auto;
     width: 90%;
-
+    margin: 0 0 50px 5%;
 }
 
 /* задаем свойства всем абзацам*/
 
 p {
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     /*  font-style: italic;*/
     margin: auto;
     text-align: center;
@@ -168,6 +172,7 @@ p {
 
 .article_gradient {
     margin: 50px 0 50px 0;
+    padding-top: 20px;
     display: flex;
     background: #f5f5f5;
     background: linear-gradient(to right, #D2691E 0%, #D2691E 14.2857143%, #f5f5f5 14.2857143%, #f5f5f5 28.5714286%, #dcdcdc 28.5714286%, #dcdcdc 42.8571429%, #d3d3d3 42.8571429%, #d3d3d3 57.1428572%, #c0c0c0 57.1428572%, #c0c0c0 71.4285715%, #a9a9a9 71.4285715%, #a9a9a9 85.7142858%, #808080 85.7142858%, #808080 100%);
@@ -178,7 +183,6 @@ section {
     /*-webkit-box-shadow: inset 0 0 20px #dcdcdc;
     box-shadow: inset 0 0 25px #dcdcdc;*/
     width: calc(100% / 7);
-
 }
 
 h1 {
@@ -186,18 +190,17 @@ h1 {
     font-size: 24px;
     text-align: center;
     font-weight: bold;
-
 }
 
 section>p {
     color: #000;
-    font-size: 15px;
+    font-size: 18px;
     font-style: normal;
-    padding: 10px 0;
+    padding: 10px 0 20px;
 }
 
 .article__section_1 {
-    background-color: #D2691E;
+    margin-top: 32px;
 }
 
 .article__section_2:before,
@@ -207,6 +210,8 @@ section>p {
 .article__section_6:before,
 .article__section_7:before {
     font-size: 50px;
+    position: relative;
+    left: 40%;
 }
 
 .article__section_2:before {
@@ -244,18 +249,27 @@ section>p {
     text-align: center;
 }
 
-button {
+.carousel__button_left,
+.carousel__button_right {
     font-size: 30px;
     background-color: rgba(169, 169, 169, .7);
     border-radius: 50%;
     color: #fff;
+    top: 200px;
+    position: relative;
+
+}
+
+.carousel__button_right {
+    right: 0;
+    top: 200px;
+    position: relative;
 
 }
 
 .carousel__button_left:before {
     content: "a";
     font-family: "untitled-font-1";
-
 }
 
 .carousel__button_right:before {
@@ -290,27 +304,40 @@ figcaption {
     display: block;
 }
 
-.carousel {
+/*.carousel {
     width: 30%;
     overflow: hidden;
+}*/
+
+.carousel__ul {
+    width: 9999px;
+    margin: auto;
+    padding: 0;
 }
 
 .carousel__block {
-    width: 9999px;
+    width: 100%;
     overflow: hidden;
-    display: flex;
+
 }
 
-.carousel__item {}
+.carousel__li {
 
-.carousel__item img {
-    /*    располагаем блоки в одну строку*/
-    flex-direction: row;
-    /*justify-content: center;*/
-    width: calc(1200px / 3);
-    height: 300px;
-    border: 20px solid #f5f5f5;
-    display: block;
+    display: inline-block;
+    padding: 0;
+    width: 4.5%;
+
+}
+
+.carousel__img {
+    width: 100%;
+    height: 350px;
+    border-top: 20px solid #f5f5f5;
+    border-bottom: 20px solid #f5f5f5;
+    border-left: 40px solid #f5f5f5;
+    border-right: 40px solid #f5f5f5;
+    display: inline-block;
+    margin: 0;
 }
 
 
@@ -464,25 +491,54 @@ footer {
     .nav__ul li:hover .nav__ul_item {
         display: block;
     }
-    .gallery {
-        width: 200px;
-        height: auto;
-    }
-    .carousel__block {
-        display: flex;
-    }
 
-    .carousel__item img {
-        /*    располагаем блоки в столбец*/
-        flex-direction: column;
-
+    .article__section_1,
+    .article__section_2,
+    .article__section_3,
+    .article__section_4,
+    .article__section_5,
+    .article__section_6,
+    .article__section_7 {
+        display: block;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .article__section_1 {
+        background: #D2691E;
+    }
+    .article__section_2 {
+        background: #f5f5f5;
+    }
+    .article__section_3 {
+        background: #dcdcdc;
+    }
+    .article__section_4 {
+        background: #d3d3d3;
+    }
+    .article__section_5 {
+        background: #c0c0c0;
+    }
+    .article__section_6 {
+        background: #a9a9a9;
+    }
+    .article__section_7 {
+        background: #808080;
     }
     .article_gradient {
+        background: none;
         display: flex;
-    }
-
-    .article_gradient  {
         flex-direction: column;
+    }
+    .article {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .article__section2_1,
+    .article__section2_2,
+    .article__section2_3 {
+        width: 100%;
     }
 
 }
