@@ -2,23 +2,23 @@ body {
     margin: 0;
     /* убрать отступ браузера*/
     font-family: "Century Gothic", Arial, sans-serif;
-
-
+    max-width: 1800px;
+        margin: auto; 
 }
 wrapper {
-    max-width: 1800px;
-    /*задаем максимальную ширину и выравниваем содержимое страницы по центру при отображении на больших экранах */
-    margin: auto;
+
+             /*задаем максимальную ширину и выравниваем содержимое страницы по центру при отображении на больших экранах */
+
+    
+
 }
-    /*задаем переходы на странице с помощью target*/
-#services__content,
-#discount__content,
-#index__content,
 #contacts__content,
-#catalog__content{
-    background-image: url(../img/bg2.jpg);
-   
+#catalog__content,
+#discount__content,
+#services__content, #index__content {
+   background-image: url(../img/bg2.jpg); 
 }
+                     /*задаем переходы на странице с помощью target*/
 
 #index__content:target {
     display: block;
@@ -92,7 +92,7 @@ wrapper {
     background: radial-gradient(#f5f5f5, #dcdcdc);
     -webkit-box-shadow: inset 0 0 50px #c0c0c0;
     box-shadow: inset 0 0 50px #c0c0c0;
-    max-width: 1500px;
+ 
     width: 100%;
 }
 
@@ -130,10 +130,10 @@ span {
 
 }
 
-/*анимирование номера при наведении курсора на шапку сайта*/
+   /*анимирование номера при наведении курсора на шапку сайта*/
 
 .header:hover .header__number_text {
-    font-size: 30px;
+    transform: scale(1.25);
     -webkit-transform: translateX(-20px);
     -ms-transform: translateX(-20px);
     transform: translateX(-20px);
@@ -181,7 +181,7 @@ ul .nav__ul a:hover {
     cursor: pointer;
 }
 
-/*создание выпадающего списка*/
+                            /*создание выпадающего списка*/
 
 .nav__ul_item {
     background-color: #f5f5f5;
@@ -276,16 +276,15 @@ iframe {
 #3d:checked~.block3__3d_none,
 #delivery:checked~.block4__delivery_none,
 #guarantee:checked~.block5__guarantee_none,
-#payment:checked~.block6__payment_none
-{
-  display: block;
+#payment:checked~.block6__payment_none {  display: block;
    position: absolute;
     width: 50%;
     left: 20%;
     top: 20%;
     background-color: #000;
-    opacity: 0.5;
-}
+    opacity: 0.5;}
+
+
 
                                       /* конец описания услуги*/
                         /*начало описания свойств "каталог"*/
@@ -339,7 +338,7 @@ p {
 }
 
 .article_gradient {
-    margin: 50px 0 50px 0;
+    margin: 50px 0 80px 0;
     padding-top: 20px;
     display: flex;
     background: #f5f5f5;
@@ -419,7 +418,6 @@ section>p {
 .article__section_5:hover,
 .article__section_6:hover,
 .article__section_7:hover {
-
     animation: one 1s ease;
 
 }
@@ -453,78 +451,57 @@ section>p {
     content: "E";
     font-family: "untitled-font-1";
 }
-
-.carousel {
-    width: 100%;
+                       /*   начало описания свойств "слайдер-карусель"    */
+#block__carousel>img {
+    width: 400px;
+    height: 350px;
+    float: left;
+    margin-left: 0;
+}
+#block__slider {
+    width: 1200px;
+    height: 350px;
+    border: 5px solid #fff;
+    margin: auto;
+    overflow: hidden;
+}
+#block__carousel {
+    width: 2000px;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+#block__carousel::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#slider-left, #slider-right {
+width: 50px;
+    height: 50px;
+    padding: 0;
+    font-size: 40px;
+    background-color: rgba(169, 169, 169, .7);
+    border-radius: 50%;
+    color: #fff;
+    top: -230px;
+     position: relative;
+    margin: 10px;
+}
+#slider-right {
+    right: -89.5%;
 }
 .carousel__title_center {
     font-size: 50px;
     text-align: center;
     color: #fff;
+    margin-bottom: 20px;
 }
-
-.carousel__button_left,
-.carousel__button_right {
-    font-size: 30px;
-    background-color: rgba(169, 169, 169, .7);
-    border-radius: 50%;
-    color: #fff;
-    top: 200px;
-    position: relative;
-
-}
-.carousel__button_left {
-    left: .5%;
-}
-.carousel__button_right {
-    right: -92%;
-    top: 200px;
-    position: relative;   
-}
-
-.carousel__button_left:before {
-    content: "a";
-    font-family: "untitled-font-1";
-}
-
-.carousel__button_right:after{
-    content: "v";
-    font-family: "untitled-font-1";
-}
-.carousel__ul {
-    width: 9999px;
-    margin: auto;
-    padding: 0;
-}
-
-.carousel__block {
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel__li{
-    display: inline-block;
-    width: 4.1%;
-    height: 350px;
-   border: 20px solid #f5f5f5;
-    float: left;
-    margin: 0;
-    padding: 0;
-}
-
-.carousel__img {
-    width: 100%;
-    height: 350px;
-    display: inline-block;
-     z-index: 1;
-    margin: 0;
-}
-
 .carousel__title{
     display: none;
     background-color: rgba(0, 0, 0, .5);
     /*делаем полупрозрачным элемент при наведении курсора*/
-       position: relative;
+      position: relative;
     color: #fff;
     text-align: center;
     font-size: 20px;
@@ -533,17 +510,13 @@ section>p {
     width: 100%;
   
 }
-.carousel__li:hover .carousel__title {
+img:hover .carousel__title {
     display: block;
-      z-index: 10;
-}
-carousel__button_left:active ul .carousel__ul{
-    position: relative;
-    left: -500px;
-}
+} 
+                          /*   конец описания свойств "слайдер-карусель"    */
 
 
-/* задаем свойства форме */
+                    /* задаем свойства форме */
 
 form {
     display: inline-block;
@@ -685,8 +658,19 @@ footer {
 }
 
 
+@media screen and (max-width: 320px){
+     .header__number_text {
+              font-size: 10px;
+        transform: none;
+        transition: none;
+    }
 
-@media screen and (max-width: 480px) {
+.nav__ul_item {
+       width: 100%;
+   
+}
+}
+@media screen and (max-width: 480px){
     .header__number_text {
         float: none;
         font-size: 30px;
@@ -703,7 +687,10 @@ footer {
     .nav__ul li:hover .nav__ul_item {
         display: block;
     }
-
+.nav__ul_item {
+       width: 60%;
+   
+}
     .article__section_1,
     .article__section_2,
     .article__section_3,
@@ -741,12 +728,23 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    .article_gradient section {
+        width: 90%;
+    }
     .article {
         display: flex;
         flex-direction: column;
         width: 90%;
         margin: auto;
     }
+    .article__section_2:before,
+.article__section_3:before,
+.article__section_4:before,
+.article__section_5:before,
+.article__section_6:before,
+.article__section_7:before {
+ left: 43%;
+}
     .article__section2_1,
     .article__section2_2,
     .article__section2_3 {
@@ -761,4 +759,160 @@ footer {
         width: calc(100% - 20px);
         height: 400px;
     }
+.carousel__button_right {
+    right: -5%;
+    top: 50px;
+    position: relative;   
+}
+    .carousel__li{
+       width: 2%;
+}
+input {
+       font-size: 20px;
+}
+    
+    .section__block1, .section__block2, .section__block3,.section__block4,.section__block5,.section__block6{
+    display: block;
+    width: 80%;    margin: auto;
+    
+}
+    #services__content img {
+        width: 80%;
+    
+    }
+#services__content figcaption {
+    display: block;
+    color: #fff;
+    margin-top: -20px;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
+.catalog__content > h1 {
+    margin-top: 0;
+    padding-top: 15px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: inherit;
+}
+
+[type=checkbox] {
+    display: none;
+}
+.block1__material_none,
+.block2__furniture_none,
+.block3__3d_none,
+.block4__delivery_none,
+.block5__guarantee_none,
+.block6__payment_none {
+    display: none;
+
+}
+#material:checked~.block1__material_none, #furniture:checked~.block2__furniture_none,
+#3d:checked~.block3__3d_none,
+#delivery:checked~.block4__delivery_none,
+#guarantee:checked~.block5__guarantee_none,
+#payment:checked~.block6__payment_none {  display: block;
+   position: absolute;
+    width: 50%;
+    left: 20%;
+    top: 20%;
+    background-color: #000;
+    opacity: 0.5;}
+
+
+
+}
+    
+@media screen and (max-width: 720px){
+ .header__number_text {
+        float: none;
+        font-size: 28px;
+        transform: none;
+        transition: none;
+    }
+
+    .nav__ul li {
+        display: block;
+        font-size: 20px;
+        width: 100%;
+        padding: 0;
+    }
+    .nav__ul li:hover .nav__ul_item {
+        display: block;
+    }
+.nav__ul_item {
+       width: 60%;
+   
+}
+       .article__section_1,
+    .article__section_2,
+    .article__section_3,
+    .article__section_4,
+    .article__section_5,
+    .article__section_6,
+    .article__section_7 {
+        display: block;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .article__section_1 {
+        background: #D2691E;
+    }
+    .article__section_2 {
+        background: #f5f5f5;
+    }
+    .article__section_3 {
+        background: #dcdcdc;
+    }
+    .article__section_4 {
+        background: #d3d3d3;
+    }
+    .article__section_5 {
+        background: #c0c0c0;
+    }
+    .article__section_6 {
+        background: #a9a9a9;
+    }
+    .article__section_7 {
+        background: #808080;
+    }
+    .article_gradient {
+        background: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .article_gradient section {
+        width: 90%;
+    }
+    .article {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .article__section_2:before,
+.article__section_3:before,
+.article__section_4:before,
+.article__section_5:before,
+.article__section_6:before,
+.article__section_7:before {
+ left: 43%;
+}
+     .article__section2_1,
+    .article__section2_2,
+    .article__section2_3 {
+        width: 100%;
+    }
+    .contacts>p {
+        text-align: left;
+        margin: 10px 10px;
+    }
+    iframe {
+        margin: 10px 10px;
+        width: calc(100% - 20px);
+        height: 400px;
+    }
+    
+    @media screen and (max-width: 1200px){
 }
