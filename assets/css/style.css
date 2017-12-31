@@ -15,7 +15,8 @@ wrapper {
 #contacts__content,
 #catalog__content,
 #discount__content,
-#services__content, #index__content {
+#services__content, 
+#index__content {
    background-image: url(../img/bg2.jpg); 
 }
                      /*задаем переходы на странице с помощью target*/
@@ -217,7 +218,7 @@ li:hover>.nav__ul_item {
 .contacts>p {
     text-align: left;
     padding:  10px 0px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 .contacts>p:nth-of-type(1){
        padding-top: 50px;
@@ -225,25 +226,32 @@ li:hover>.nav__ul_item {
 .contacts>p:nth-last-child(1) {
        padding-bottom: 50px;
 }
-iframe {
+contacts__content>iframe {
     margin-left: 40px;
-    width: 50%;
-    height: 500px;
+    width: calc(100% - 80px);
+    height: 30em;
 }
                                           /* конец описания свойств страницы контакты */
 
 
                                      /* начало описания услуги*/
-.section__block1, .section__block2, .section__block3,.section__block4,.section__block5,.section__block6{
+.section__block1, 
+.section__block2, 
+.section__block3,
+.section__block4,
+.section__block5,
+.section__block6{
     display: inline-block;
     width: 20%;
-    margin: 5%;
-    
+    margin: 10% 5% 5%;
 }
-.section__block5 {
-    position: relative;
-    top: -32px;
+.section__block4,
+.section__block5,
+.section__block6{
+    margin-top: 0%;
 }
+
+
 #services__content figcaption {
     display: block;
     color: #fff;
@@ -263,27 +271,34 @@ iframe {
 [type=checkbox] {
     display: none;
 }
-.block1__material_none,
-.block2__furniture_none,
-.block3__3d_none,
-.block4__delivery_none,
-.block5__guarantee_none,
-.block6__payment_none {
+.block1__material_none, .block2__furniture_none,
+.block3__3d_none, .block4__delivery_none, .block5__guarantee_none,
+.block6__payment_none
+{
     display: none;
 
 }
-#material:checked~.block1__material_none, #furniture:checked~.block2__furniture_none,
-#3d:checked~.block3__3d_none,
+#material:checked~.block1__material_none,
+#furniture:checked~.block2__furniture_none,
+#model:checked~.block3__3d_none, #delivery:checked~.block4__delivery_none,
+#guarantee:checked~.block5__guarantee_none,
+#payment:checked~.block6__payment_none{
+    display: block;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 25%;
+    background-color: #000;
+    opacity: 0.8;
+    padding-bottom: 5%;
+    transition: all ease 1s;
+}
 #delivery:checked~.block4__delivery_none,
 #guarantee:checked~.block5__guarantee_none,
-#payment:checked~.block6__payment_none {  display: block;
-   position: absolute;
-    width: 50%;
-    left: 20%;
-    top: 20%;
-    background-color: #000;
-    opacity: 0.5;}
-
+#payment:checked~.block6__payment_none{
+    top: 100%;
+ 
+}
 
 
                                       /* конец описания услуги*/
@@ -306,7 +321,11 @@ iframe {
 #discount__content img {
     width: 60%;
     margin: 5% 20%;
-
+}
+#discount__content>iframe {
+      width: 60%;
+    margin: 5% 20%;
+    height: 500px;
 }
                         /*конец описания свойств "акции"*/
 
@@ -796,7 +815,7 @@ input {
     font-weight: inherit;
 }
 
-[type=checkbox] {
+/*[type=checkbox] {
     display: none;
 }
 .block1__material_none,
@@ -822,7 +841,7 @@ input {
 
 
 
-}
+}*/
     
 @media screen and (max-width: 720px){
  .header__number_text {
