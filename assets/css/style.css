@@ -2,29 +2,28 @@ body {
     margin: 0;
     /* убрать отступ браузера*/
     font-family: "Century Gothic", Arial, sans-serif;
+    /*задаем максимальную ширину и 
+      выравниваем  содержимое страницы по центру  при отображении на больших экранах */
     max-width: 1800px;
     margin: auto;
+
 }
 
-wrapper {
-
-    /*задаем максимальную ширину и выравниваем содержимое страницы по центру при отображении на больших экранах */
-}
-
-#contacts__content,
-#catalog__content,
-#discount__content,
-#services__content,
-#index__content,
 #kichen,
 #children_furniture,
 #bedroom,
 #hallway,
-#wardrobe {
+#wardrobe,
+#index__content,
+#contacts__content,
+#catalog__content,
+#discount__content,
+#services__content {
     background-image: url(../img/bg2.jpg);
 }
 
-/*задаем переходы на странице с помощью target*/
+
+                                        /*задаем переходы на странице с помощью target*/
 
 #index__content:target {
     display: block;
@@ -154,9 +153,9 @@ wrapper {
     display: none;
 }
 
-/*конец переход по каталогу*/
+                                                    /*конец перехода по каталогу*/
 
-/*задаем свойства для шапки сайта */
+                                                    /*задаем свойства для шапки сайта */
 
 .header {
     background-color: #f5f5f5;
@@ -166,7 +165,6 @@ wrapper {
     background: radial-gradient(#f5f5f5, #dcdcdc);
     -webkit-box-shadow: inset 0 0 50px #c0c0c0;
     box-shadow: inset 0 0 50px #c0c0c0;
-
     width: 100%;
 }
 
@@ -215,7 +213,7 @@ span {
 
 ul.nav__ul {
     margin: auto;
-    /*варавниваем меню по центру*/
+    /*выравниваем меню по центру*/
     padding: 0;
     text-align: center;
     margin-top: 8px;
@@ -255,7 +253,7 @@ ul .nav__ul a:hover {
     cursor: pointer;
 }
 
-/*создание выпадающего списка*/
+                                                    /*создание выпадающего списка*/
 
 .nav__ul_item {
     background-color: #f5f5f5;
@@ -286,7 +284,9 @@ li:hover>.nav__ul_item {
     display: block;
 }
 
-/* начало описания свойств страницы контакты */
+
+
+                                            /* начало описания свойств страницы контакты */
 
 .contacts>p {
     text-align: left;
@@ -308,9 +308,13 @@ li:hover>.nav__ul_item {
     height: 40em;
 }
 
-/* конец описания свойств страницы контакты */
+                                        /* конец описания свойств страницы контакты */
 
-/* начало описания услуги*/
+                                            /* начало описания страницы преимущества*/
+
+[type=radio] {
+    display: none;
+}
 
 .section__block1,
 .section__block2,
@@ -329,7 +333,6 @@ li:hover>.nav__ul_item {
     margin-top: 0%;
 }
 
-
 #services__content figcaption {
     display: block;
     color: #fff;
@@ -339,17 +342,6 @@ li:hover>.nav__ul_item {
     text-align: center;
 }
 
-.catalog__content>h1 {
-    margin-top: 0;
-    padding-top: 15px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: inherit;
-}
-
-[type=checkbox] {
-    display: none;
-}
 
 .block1__material_none,
 .block2__furniture_none,
@@ -384,9 +376,9 @@ li:hover>.nav__ul_item {
 
 }
 
-/* конец описания услуги*/
+                                                /* конец описания страницы преимущества*/
 
-/*начало описания свойств "каталог"*/
+                                                /*начало описания свойств "каталог"*/
 
 #catalog__content h1,
 #kichen h1,
@@ -474,14 +466,9 @@ li:hover>.nav__ul_item {
     font-size: 20px;
 }
 
+                                                    /*конец описания свойств "каталог"*/
 
-
-
-
-
-/*конец описания свойств "каталог"*/
-
-/*начало описания свойств "акции"*/
+                                                    /*начало описания свойств "акции"*/
 
 #discount__content img {
     width: 60%;
@@ -494,9 +481,9 @@ li:hover>.nav__ul_item {
     height: 500px;
 }
 
-/*конец описания свойств "акции"*/
+                                                /*конец описания свойств "акции"*/
 
-/*задаем свойства главной страницы */
+                                                /*задаем свойства главной страницы */
 
 /*слайдер*/
 
@@ -516,7 +503,6 @@ img {
 p {
     color: #fff;
     font-size: 22px;
-    /*  font-style: italic;*/
     margin: auto;
     text-align: center;
     width: 80%;
@@ -640,15 +626,16 @@ section>p {
 
 /*   начало описания свойств "слайдер-карусель"    */
 
-#block__carousel>img {
-    width: 400px;
+#block__carousel a>img {
+    width: 17%;
     height: 350px;
     float: left;
     margin-left: 0;
+    z-index: 1;
 }
 
 #block__slider {
-    width: 1200px;
+    width: 90%;
     height: 350px;
     border: 5px solid #fff;
     margin: auto;
@@ -656,7 +643,7 @@ section>p {
 }
 
 #block__carousel {
-    width: 2000px;
+    width: 200%;
     position: relative;
     left: 0;
     transition: all ease 1s;
@@ -670,8 +657,8 @@ section>p {
 
 #slider-left,
 #slider-right {
-    width: 50px;
-    height: 50px;
+    width: 3%;
+    height: 3%;
     padding: 0;
     font-size: 40px;
     background-color: rgba(169, 169, 169, .7);
@@ -683,7 +670,7 @@ section>p {
 }
 
 #slider-right {
-    right: -89.5%;
+    right: -90.5%;
 }
 
 .carousel__title_center {
@@ -693,23 +680,6 @@ section>p {
     margin-bottom: 20px;
 }
 
-.carousel__title {
-    display: none;
-    background-color: rgba(0, 0, 0, .5);
-    /*делаем полупрозрачным элемент при наведении курсора*/
-    position: relative;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    height: 350px;
-    top: -358px;
-    width: 100%;
-
-}
-
-img:hover .carousel__title {
-    display: block;
-}
 
 /*   конец описания свойств "слайдер-карусель"    */
 
@@ -815,7 +785,7 @@ h2 {
 
 }
 
-/* задаем свойства подвалу*/
+                                                                /* задаем свойства подвалу*/
 
 footer {
     background-color: #f5f5f5;
@@ -853,6 +823,7 @@ footer {
     content: "f ";
 }
 
+                                /* создание медиазапроса с медиаусловием максимальная ширина экрана 320px*/
 
 @media screen and (max-width: 320px) {
     .header__name_text {
@@ -909,7 +880,14 @@ footer {
     }
 }
 
+                                    /* создание медиазапроса с медиаусловием максимальная ширина экрана 480px*/
+
 @media screen and (max-width: 480px) {
+    .header__name_text {
+        font-size: 40px;
+
+
+    }
     .header__number_text {
         float: none;
         font-size: 30px;
@@ -1084,8 +1062,16 @@ footer {
     .contacts>p:nth-of-type(1) {
         margin-top: 0;
     }
+    .carousel__title_center,
+    #slider-left,
+    #slider-right,
+    #block__slider {
+        display: none;
+    }
 
 }
+
+                                        /* создание медиазапроса с медиаусловием максимальная ширина экрана 720px*/
 
 @media screen and (max-width: 720px) {
     .header__number_text {
@@ -1253,4 +1239,129 @@ footer {
     }
 }
 
-@media screen and (max-width: 1200px) {}
+                    /* создание медиазапроса с медиаусловием минимальная ширина экрана 721px и максимальная ширина экрана 1200px*/
+
+@media screen and (min-width: 721px) and (max-width: 1200px) {
+    .header__name_text {
+        margin: 5px 0 2px 20px;
+        font-size: 30px;
+
+
+    }
+    .header__number_text {
+        font-size: 20px;
+        margin: .2em 0 0 .6em;
+    }
+    ul.nav__ul {
+        margin-top: 6px;
+        line-height: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 3px 3px;
+        margin: 0;
+    }
+
+    .contacts>p {
+        font-size: 18px;
+    }
+    #services__content figcaption {
+        font-size: 15px;
+
+    }
+    #material:checked~.block1__material_none,
+    #furniture:checked~.block2__furniture_none,
+    #model:checked~.block3__3d_none,
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 50%;
+        font-size: 15px;
+        width: 100%;
+        left: 0;
+        opacity: 0.9;
+    }
+    #services__content p {
+        font-size: 15px;
+
+    }
+    #catalog__content h1,
+    #kichen h1,
+    #children_furniture h1,
+    #bedroom h1,
+    #hallway h1,
+    #wardrobe h1 {
+        font-size: 30px;
+    }
+
+    .block_right_catalog {
+        float: right;
+        width: calc(55% - 10px);
+        color: #f5f5f5;
+        margin: 5px 10px 0 0;
+        text-align: center;
+        font-size: 14px;
+    }
+    #catalog__content img,
+    #kichen img,
+    #children_furniture img,
+    #bedroom img,
+    #hallway img,
+    #wardrobe img {
+        width: 35%;
+
+    }
+    p {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 14px;
+
+    }
+    section>p {
+        font-size: 12px;
+        margin: 0 1%;
+        width: 90%;
+    }
+    .article__section_2:before,
+    .article__section_3:before,
+    .article__section_4:before,
+    .article__section_5:before,
+    .article__section_6:before,
+    .article__section_7:before {
+        font-size: 30px;
+    }
+
+    #block__carousel a>img {
+        height: 200px;
+    }
+
+    #block__slider {
+        height: 200px;
+    }
+
+    #slider-left,
+    #slider-right {
+        font-size: 20px;
+        top: -120px;
+    }
+
+    #slider-right {
+        right: -88.5%;
+    }
+
+    .carousel__title_center {
+        font-size: 35px;
+    }
+
+
+    form>p {
+        font-size: 25px;
+    }
+
+    input {
+        font-size: 20px;
+
+    }
+}

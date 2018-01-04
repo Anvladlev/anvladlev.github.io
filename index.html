@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>АнкорМебель</title>
     <link href="https://file.myfontastic.com/rBroXgwRfowmuhJmWMe3f5/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="faviconka_ru_1791.ico" type="image/x-icon">
-    <script src="assets/js/style.js"></script>
+    <script src="assets/js/style.js" defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1">
     <meta name="keywords" content="корпусная мебель, фурнитура, производство, главная страница, мобильная версия, веб-сайт, Барановичи, Ревинский Андрей, мебельное производство, производство мебели, производство мебели Анкормебель, анкормебель, АНКОР, мебель из дуба, мебель Беларусь, белорусская мебель, мебель Беларуси, мебель Белоруссии, мебель из Беларуси, мебель из Белоруссии">
@@ -18,11 +18,11 @@
 
 
         <!----- начало шапки  сайта ------->
+
         <header class="header">
             <div class="header__name_text"><a href="index.html" title="главная">анкор <span>м</span>ебель</a></div>
             <div class="header__number_text">+37529 203 37 57</div>
             <ul class="nav__ul">
-
                 <li><a href="index.html" title="главная"> Главная</a></li>
                 <li><a href="#catalog__content" title="каталог">Каталог</a>
                     <ul class="nav__ul_item">
@@ -36,13 +36,13 @@
                 <li><a href="#services__content" title="преимущества">Преимущества</a></li>
                 <li><a href="#discount__content" title="акции">Акции</a></li>
                 <li><a href="#contacts__content" title="контакты">Контакты</a></li>
-
             </ul>
         </header>
         <!----- конец шапки  ------->
 
 
         <!----- начало страницы каталог   ------->
+
         <div id="catalog__content">
             <article class="block__article1">
                 <h1>Кухни</h1>
@@ -83,8 +83,7 @@
                 <section class="article2__section1_child">
                     <div class="block_right_catalog">
                         <p></p>Модульная группа для детской спальни, исполненная в светлых тонах придется по вкусу вам и вашему ребенку. За счет своей практичности и функциональности мебельный набор станет отличным выбором в оформлении комнаты. Удобная кровать
-                        с выдвижным ящиком позволит сэкономить место. Миниатюрные навесные полки добавят живости в композицию. Компактный комод хорошо подойдет для хранения любых вещей, которые должны быть под рукой. Письменный стол в угловом исполнении
-                        не только удобен, но и оригинален. Вся группа в целом создает неповторимый образ помещения, подходящий для занятий, отдыха и сна.
+                        с выдвижным ящиком позволит сэкономить место. Компактный комод хорошо подойдет для хранения любых вещей, которые должны быть под рукой. Письменный стол в угловом исполнении не только удобен, но и оригинален.
                     </div>
                     <img src="assets/img/child_room_1.jpg" alt="детская1">
                 </section>
@@ -98,8 +97,7 @@
 
                 <section class="article2__section3_child">
                     <div class="block_right_catalog"> Многофункциональный комплект мебели для детской комнаты представляет собой горку&ndash;стенку, кровать&ndash;чердак и небольшой столик. Кровать&ndash;чердак надежно защищена от падения ребенка с помощью высокого и прочного бортика.
-                        Доступ на кровать выполняется с помощью удобной боковой лестницы. Имеется небольшой шкаф для детской одежды и большое количество выдвижных ящиков и полок для книг, школьных принадлежностей и прочих вещей. Компактность конструкции
-                        позволяет использовать ее даже в самых маленьких комнатах. </div>
+                        Доступ на кровать выполняется с помощью удобной боковой лестницы. Компактность конструкции позволяет использовать ее даже в самых маленьких комнатах. </div>
                     <img src="assets/img/child_room_3.jpg" alt="детская3">
                 </section>
 
@@ -188,12 +186,11 @@
                 </section>
             </article>
 
-
         </div>
 
         <!----- конец страницы каталог   ------->
 
-        <!------------------переход по каталогу-------------------->
+        <!------------------переход по каталогу (выпадающий список)-------------------->
 
         <article class="block__article1" id="kichen">
             <h1>Кухни</h1>
@@ -337,14 +334,15 @@
             </section>
         </article>
 
-
         <!------------------переход по каталогу-------------------->
 
 
-        <!----- начало страницы услуги   ------->
+
+        <!----- начало страницы преимущества   ------->
+
         <div id="services__content">
             <section class="section__block1">
-                <input id="material" type="checkbox">
+                <input id="material" type="radio" name="advantages">
                 <label for="material">
                       <img src="assets/img/16.png">
                         <figcaption>высококачественные материалы</figcaption></label>
@@ -356,7 +354,8 @@
                 </div>
             </section>
             <section class="section__block2">
-                <input id="furniture" type="checkbox">
+                <input id="furniture" type="radio" name="advantages">
+
                 <label for="furniture">
                       <img src="assets/img/17.png">
                         <figcaption>фурнитура премиум класса</figcaption></label>
@@ -368,7 +367,7 @@
                 </div>
             </section>
             <section class="section__block3">
-                <input id="model" type="checkbox">
+                <input id="model" type="radio" name="advantages">
                 <label for="model">
                       <img src="assets/img/18.png">
                         <figcaption>3D модель мебели бесплатно</figcaption></label>
@@ -381,7 +380,8 @@
                 </div>
             </section>
             <section class="section__block4">
-                <input id="delivery" type="checkbox">
+                <input id="delivery" type="radio" name="advantages">
+
                 <label for="delivery">
                       <img src="assets/img/19.png">
                         <figcaption>доставка и сборка бесплатно</figcaption></label>
@@ -393,7 +393,7 @@
                 </div>
             </section>
             <section class="section__block5">
-                <input id="guarantee" type="checkbox">
+                <input id="guarantee" type="radio" name="advantages">
                 <label for="guarantee">
                       <img src="assets/img/20.png">
                         <figcaption>гарантия<br> 2 года
@@ -407,7 +407,7 @@
                 </div>
             </section>
             <section class="section__block6">
-                <input id="payment" type="checkbox">
+                <input id="payment" type="radio" name="advantages">
                 <label for="payment">
                       <img src="assets/img/21.png">
                         <figcaption>рассрочка 0% годовых</figcaption></label>
@@ -422,7 +422,7 @@
 
         </div>
 
-        <!----- конец страницы услуги   ------->
+        <!----- конец страницы преимущества   ------->
 
 
 
@@ -454,6 +454,7 @@
 
 
         <!----- начало главной страницы  ------->
+
         <div id="index__content">
             <figure class="gallery"><a href="#"><img src="assets/img/kichen_1.jpg" alt="кухни"></a></figure>
 
@@ -501,18 +502,12 @@
             <!----слайдер карусель начало ----->
             <p class="carousel__title_center">Каталог</p>
             <div id="block__slider">
-
                 <div id="block__carousel">
-                    <img src="assets/img/child_room_1.jpg" alt="">
-                    <figcaption class="carousel__title">Детская мебель</figcaption>
-                    <img src="assets/img/bedroom_1.jpg" alt="мебель для спальни">
-                    <figcaption class="carousel__title">Мебель для спальни</figcaption>
-                    <img src="assets/img/hallway_1.jpg" alt="прихожие">
-                    <figcaption class="carousel__title">Прихожие</figcaption>
-                    <img src="assets/img/kichen_1.jpg" alt="кухни">
-                    <figcaption class="carousel__title">Кухни</figcaption>
-                    <img src="assets/img/wardrobe_1.jpg" alt="">
-                    <figcaption class="carousel__title">Прихожие</figcaption>
+                    <a href="#children_furniture" title="детская мебель"> <img src="assets/img/child_room_1.jpg" alt="детская мебель"> </a>
+                    <a href="#bedroom" title="мебель для спальни"> <img src="assets/img/bedroom_1.jpg" alt="мебель для спальни"></a>
+                    <a href="#hallway" title="прихожие"><img src="assets/img/hallway_1.jpg" alt="прихожие"></a>
+                    <a href="#kichen" title="кухни"><img src="assets/img/kichen_1.jpg" alt="кухни"></a>
+                    <a href="#wardrobe" title="шкафы-купе"><img src="assets/img/wardrobe_1.jpg" alt=""></a>
                 </div>
             </div>
             <button id="slider-left">&lt</button>
@@ -544,32 +539,20 @@
         <!----- конец главной страницы  ------->
 
 
+
         <!----- начало подвала  ------->
+
         <footer class="footer">
             <div class="footer__name_text">анкор <span>м</span>ебель</div>
             <div class="footer__number_text">+37529 203 37 57</div>
             <div id="footer__mail">ankorm@gmail.com</div>
 
         </footer>
-
         <!----- конец подвала   ------->
 
 
     </wrapper>
 
-    <script>
-        document.getElementById('slider-left').onclick = sliderLeft;
-        var left = 0;
-
-        function sliderLeft() {
-            var block__carousel = document.getElementById('block__carousel');
-            left = left - 400;
-            if (left < -800) {
-                left = 0;
-            }
-            block__carousel.style.left = left + 'px';
-        }
-    </script>
 
 </body>
 
