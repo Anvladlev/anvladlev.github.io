@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1">
     <meta name="keywords" content="корпусная мебель, фурнитура, производство, главная страница, мобильная версия, веб-сайт, Барановичи, Ревинский Андрей, мебельное производство, производство мебели, производство мебели Анкормебель, анкормебель, АНКОР, мебель из дуба, мебель Беларусь, белорусская мебель, мебель Беларуси, мебель Белоруссии, мебель из Беларуси, мебель из Белоруссии">
     <meta name="description" content="Мебельная фабрика &quot;Анкормебель&quot;. Производство мебель из дуба: кухни, спальни, прихожие, гостиные, обеденные группы.">
+    <script src='unitegallery/dist/js/unitegallery.min.js' type='text/javascript'></script>
+    <link href='unitegallery/dist/css/unite-gallery.css' rel='stylesheet' type='text/css' />
+    <script src='unitegallery/dist/themes/slider/ug-theme-slider.js' type='text/javascript'></script>
 </head>
 
 <body>
@@ -456,7 +459,16 @@
         <!----- начало главной страницы  ------->
 
         <div id="index__content">
-            <figure class="gallery"><a href="#"><img src="assets/img/kichen_1.jpg" alt="кухни"></a></figure>
+            
+            
+            
+            <div id="gallery">
+                <img src="assets/img/kichen_1.jpg" alt="кухни">
+                <img src="assets/img/bedroom_1.jpg" alt="мебель для спальни">
+                <img src="assets/img/child_room_3.jpg" alt="детская мебель">
+                <img src="assets/img/hallway_2.jpg" alt="прихожие">
+                <img src="assets/img/wardrobe_2.jpg" alt="шкафы-купе">
+            </div>
 
             <p>Ни для кого не секрет, что комфорт и уют в доме складывается из множества факторов. В этом списке особое место занимает мебель, которая должна быть не только практичной и функциональной, но и стильной. И в решении этого вопроса готова помочь
                 компания &quot;АнкорМебель&quot;.</p>
@@ -553,6 +565,12 @@
 
     </wrapper>
 
+
+    <script type="text/javascript">
+        	jQuery("#gallery").unitegallery({
+				gallery_theme: "slider"
+			});
+    </script>
 
 </body>
 
