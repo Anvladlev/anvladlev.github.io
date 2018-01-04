@@ -432,7 +432,13 @@ li:hover>.nav__ul_item {
     box-shadow: 0 0 20px #000;
     margin: 20px;
 }
-
+.article1__section4_kichen:hover,
+.article2__section6_child:hover,
+.article3__section4_bedroom:hover,
+.article4__section3_hallway:hover,
+.article5__section5_wardrobe:hover {
+     margin-bottom: 0px;
+}
 @keyframes bord {
     0% {
         border-left: 10px solid #fff;
