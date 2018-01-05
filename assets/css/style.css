@@ -1248,7 +1248,15 @@ h2 {
 
 }
 
-@media screen and (min-width: 721px) and (max-width: 1200px) {
+@media screen and (min-width: 721px) and (max-width: 850px) {
+    #children_furniture .block_right_catalog{
+        font-size: 11.5px;
+    }
+    .block__article2 .block_right_catalog {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 721px) and (max-width: 1350px) {
     .header__name_text {
         margin: 5px 0 2px 20px;
         font-size: 30px;
@@ -1322,7 +1330,13 @@ h2 {
     #hallway img,
     #wardrobe img {
         width: 35%;
+        margin-top: 10px;
+        
 
+    }
+   .block_right_catalog {
+        color: #000;
+margin-top: 10px;
     }
     p {
         font-size: 18px;
