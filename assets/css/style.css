@@ -250,22 +250,18 @@ li:hover>.nav__ul_item {
 }
 
                                             /* начало описания свойств страницы контакты */
- #contacts__content {
-   height: 50em; }  
-.contacts{
-    width: 38%;
+ .contacts {
+     width: 38%;
      margin-top: 5%;
-    padding: 10px;
-}
+ }
 
-#contacts__content>iframe {
-    width: 60%;
-    height: 40em;
-  position: absolute;
-  right: 2%;
-  top: 25%;
-    
-}
+ #contacts__content>iframe {
+ width: 55%;
+ height: 500px;
+ position: relative;
+ left: 40%;
+ top: -300px;
+ }
 
 
                                             /* конец описания свойств страницы контакты */
@@ -899,14 +895,17 @@ h2 {
         margin-left: 10px;
         font-size: 15px;
     }
+ .contacts {
+     width: 100%;
+     margin-top: 5%;
+ }
 
-    .contacts {
-        width: 100%;
-        display: block;
-    }
-    #contacts__content>iframe {
-        width: 100%;
-    }
+ #contacts__content>iframe {
+ width: 100%;
+ height: 500px;
+  left: 0%;
+ top: 0px;
+ }
     #discount__content h1 {
         font-size: 14px;
     }
@@ -1106,17 +1105,21 @@ h2 {
     }
     .contacts {
         width: 100%;
-        display: block;
+        margin-top: 5%;
     }
+
     #contacts__content>iframe {
         width: 100%;
+        height: 500px;
+        left: 0%;
+        top: 0px;
     }
     #discount__content h1 {
         font-size: 18px;
     }
 }
 
-/* создаем медиазапрос с медиаусловием максимальная ширина экрана 720рх*/
+                                          /* создаем медиазапрос с медиаусловием максимальная ширина экрана 720рх*/
 
 @media screen and (max-width: 720px) {
     .header__number_text {
@@ -1317,19 +1320,15 @@ h2 {
         right: -85%;
     }
     .contacts {
-        width: 90%;
+        width: 100%;
         margin-top: 5%;
-        padding: 10px;
     }
 
     #contacts__content>iframe {
         width: 100%;
-        height: 40em;
-        position: relative;
-
-    }
-    #contacts__content {
-        height: 70em;
+        height: 500px;
+        left: 0%;
+        top: 0px;
     }
 
     #discount__content h1 {
@@ -1337,7 +1336,7 @@ h2 {
     }
 }
 
-/* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 849рх*/
+                                  /* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 849рх*/
 
 @media screen and (min-width: 721px) and (max-width: 849px) {
     .nav__ul li {
@@ -1364,31 +1363,75 @@ h2 {
         text-align: center;
         margin-left: 10%;
     }
+    #services__content figcaption {
+        font-size: 15px;
+
+    }
+    #services__content p {
+        font-size: 15px;
+
+    }
+    #material:checked~.block1__material_none,
+    #furniture:checked~.block2__furniture_none,
+    #model:checked~.block3__3d_none,
     #delivery:checked~.block4__delivery_none,
     #guarantee:checked~.block5__guarantee_none,
     #payment:checked~.block6__payment_none {
-        top: 30%;
-
+        top: 18%;
+    }
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 50%;
     }
     .contacts {
-        width: 90%;
+        width: 100%;
         margin-top: 5%;
-        padding: 10px;
     }
 
     #contacts__content>iframe {
         width: 100%;
-        height: 40em;
-        position: relative;
-
-    }
-    #contacts__content {
-        height: 70em;
+        height: 500px;
+        left: 0%;
+        top: 0px;
     }
 }
 
-/* создаем медиазапрос с медиаусловием минимальная ширина 850рх и максимальная ширина экрана 1350рх*/
+                              /* создаем медиазапрос с медиаусловием минимальная ширина 850рх и максимальная ширина экрана 1000рх*/
 
+@media screen and (min-width: 850px) and (max-width: 1000px) {
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 50%;
+    }
+    #material:checked~.block1__material_none,
+    #furniture:checked~.block2__furniture_none,
+    #model:checked~.block3__3d_none {
+        top: 15%;
+    }
+.section__block6 img{
+    position: relative;
+    top: -20px;
+    }
+}
+ 
+                                  /* создаем медиазапрос с медиаусловием минимальная ширина 1000рх и максимальная ширина экрана 1350рх*/
+
+@media screen and (min-width: 1000px) and (max-width: 1350px) {
+    #material:checked~.block1__material_none,
+    #furniture:checked~.block2__furniture_none,
+    #model:checked~.block3__3d_none {
+        top: 10%;
+
+    }
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 40%;
+    }
+}
+                                    /* создаем медиазапрос с медиаусловием минимальная ширина 850рх и максимальная ширина экрана 1350рх*/
 @media screen and (min-width: 850px) and (max-width: 1350px) {
     .header__name_text {
         margin: 5px 0 2px 20px;
@@ -1415,25 +1458,23 @@ h2 {
         padding: 3px 3px;
         margin: 0;
     }
+    .contacts {
+        width: 100%;
+        margin-top: 5%;
+    }
 
+    #contacts__content>iframe {
+        width: 100%;
+        height: 500px;
+        left: 0%;
+        top: 0px;
+    }
     .contacts>p {
         font-size: 18px;
     }
     #services__content figcaption {
         font-size: 15px;
 
-    }
-    #material:checked~.block1__material_none,
-    #furniture:checked~.block2__furniture_none,
-    #model:checked~.block3__3d_none,
-    #delivery:checked~.block4__delivery_none,
-    #guarantee:checked~.block5__guarantee_none,
-    #payment:checked~.block6__payment_none {
-        top: 50%;
-        font-size: 15px;
-        width: 80%;
-        left: 0;
-        opacity: 0.9;
     }
     #services__content p {
         font-size: 15px;
@@ -1521,8 +1562,45 @@ h2 {
 
     input {
         font-size: 20px;
-
     }
-
-
+    
+}
+    
+                                                          /* создаем медиазапрос с медиаусловием минимальная ширина 1350рх*/
+@media screen and (min-width: 1350px) {
+    #material:checked~.block1__material_none,
+    #furniture:checked~.block2__furniture_none,
+    #model:checked~.block3__3d_none,
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 200px;
+        font-size: 15px;
+        width: 80%;
+        left: 10%;
+    }
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 700px;
+    }
+}
+                                                        /* создаем медиазапрос с медиаусловием минимальная ширина 1800рх*/
+@media screen and (min-width: 1800px) {
+    #material:checked~.block1__material_none,
+    #furniture:checked~.block2__furniture_none,
+    #model:checked~.block3__3d_none,
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 200px;
+        font-size: 25px;
+        width: 60%;
+        left: 20%;
+    }
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 700px;
+    }
 }
