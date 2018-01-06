@@ -250,28 +250,23 @@ li:hover>.nav__ul_item {
 }
 
                                             /* начало описания свойств страницы контакты */
-    
-.contacts {
+ #contacts__content {
+   height: 50em; }  
+.contacts{
     width: 38%;
-    display: inline-block;
-    margin-top: 5%;
-    position: relative;
-    top: -100%;
+     margin-top: 5%;
+    padding: 10px;
 }
 
 #contacts__content>iframe {
-    margin: 40px;
     width: 60%;
     height: 40em;
-    margin: 0;
-    position: relative;
-    left: 0%;
-    top: -100%;
+  position: absolute;
+  right: 2%;
+  top: 25%;
+    
 }
 
-#contacts__content {
-    padding: 10px 0;
-}
 
                                             /* конец описания свойств страницы контакты */
 
@@ -1120,7 +1115,9 @@ h2 {
         font-size: 18px;
     }
 }
-                                /* создаем медиазапрос с медиаусловием максимальная ширина экрана 720рх*/
+
+/* создаем медиазапрос с медиаусловием максимальная ширина экрана 720рх*/
+
 @media screen and (max-width: 720px) {
     .header__number_text {
         float: none;
@@ -1320,36 +1317,79 @@ h2 {
         right: -85%;
     }
     .contacts {
-        width: 100%;
-        display: block;
+        width: 90%;
+        margin-top: 5%;
+        padding: 10px;
     }
+
     #contacts__content>iframe {
         width: 100%;
+        height: 40em;
+        position: relative;
+
     }
+    #contacts__content {
+        height: 70em;
+    }
+
     #discount__content h1 {
         font-size: 22px;
     }
 }
-                            /* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 800рх*/
-@media screen and (min-width: 721px) and (max-width: 800px) {
-    #children_furniture .block_right_catalog {
-        font-size: 11.5px;
+
+/* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 849рх*/
+
+@media screen and (min-width: 721px) and (max-width: 849px) {
+    .nav__ul li {
+        font-size: 16px;
     }
-    .block__article2 .block_right_catalog {
-        font-size: 12px;
+    #services__content figcaption {
+        font-size: 16px;
+
+    }
+    #catalog__content img,
+    #kichen img,
+    #children_furniture img,
+    #bedroom img,
+    #hallway img,
+    #wardrobe img {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 10%;
+
+    }
+    .block_right_catalog {
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+    }
+    #delivery:checked~.block4__delivery_none,
+    #guarantee:checked~.block5__guarantee_none,
+    #payment:checked~.block6__payment_none {
+        top: 30%;
+
+    }
+    .contacts {
+        width: 90%;
+        margin-top: 5%;
+        padding: 10px;
+    }
+
+    #contacts__content>iframe {
+        width: 100%;
+        height: 40em;
+        position: relative;
+
+    }
+    #contacts__content {
+        height: 70em;
     }
 }
-                             /* создаем медиазапрос с медиаусловием минимальная ширина 801рх и максимальная ширина экрана 850рх*/
-@media screen and (min-width: 801px) and (max-width: 850px) {
-    #children_furniture .block_right_catalog {
-        font-size: 13.5px;
-    }
-    .block__article2 .block_right_catalog {
-        font-size: 13.5px;
-    }
-}
-                                     /* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 1350рх*/
-@media screen and (min-width: 721px) and (max-width: 1350px) {
+
+/* создаем медиазапрос с медиаусловием минимальная ширина 850рх и максимальная ширина экрана 1350рх*/
+
+@media screen and (min-width: 850px) and (max-width: 1350px) {
     .header__name_text {
         margin: 5px 0 2px 20px;
         font-size: 30px;
@@ -1391,7 +1431,7 @@ h2 {
     #payment:checked~.block6__payment_none {
         top: 50%;
         font-size: 15px;
-        width: 100%;
+        width: 80%;
         left: 0;
         opacity: 0.9;
     }
