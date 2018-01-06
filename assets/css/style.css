@@ -3,12 +3,14 @@ body {
     /* убрать отступ браузера*/
     font-family: "Century Gothic", Arial, sans-serif;
     max-width: 1800px;
-    /*задаем максимальную ширину и выравниваем                         содержимое страницы по центру                                     при отображении на больших экранах */
+                /*задаем максимальную ширину и выравниваем 
+                содержимое страницы по центру  
+                при отображении на больших экранах */
     margin: auto;
     background-image: url(../img/bg3.jpg);
 }
 
-/*задаем переходы на странице с помощью target*/
+                                    /*задаем переходы на странице с помощью target*/
 
 #index__content:target {
     display: block;
@@ -81,7 +83,7 @@ body {
     display: none;
 }
 
-/*переход по каталогу*/
+                                                        /*переход по каталогу*/
 
 #wardrobe:target {
     display: block;
@@ -138,9 +140,10 @@ body {
     display: none;
 }
 
-/*конец переход по каталогу*/
+                                                        /*конец переход по каталогу*/
+                                                        
 
-/*задаем свойства для шапки сайта */
+                                                /*задаем свойства для шапки сайта */
 
 .header {
     background-color: rgba(196, 176, 167, .6);
@@ -219,7 +222,7 @@ a {
     font-size: none;
 }
 
-/*создание выпадающего списка*/
+                                                    /*создание выпадающего списка*/
 
 .nav__ul_item {
     background-image: url(../img/bg3.jpg);
@@ -246,8 +249,8 @@ li:hover>.nav__ul_item {
     display: block;
 }
 
-/* начало описания свойств страницы контакты */
-
+                                            /* начало описания свойств страницы контакты */
+    
 .contacts {
     width: 38%;
     display: inline-block;
@@ -270,9 +273,9 @@ li:hover>.nav__ul_item {
     padding: 10px 0;
 }
 
-/* конец описания свойств страницы контакты */
+                                            /* конец описания свойств страницы контакты */
 
-/* начало описания преимущества*/
+                                                        /* начало описания преимущества*/
 
 [type=radio] {
     display: none;
@@ -296,8 +299,17 @@ li:hover>.nav__ul_item {
 .section__block5 img,
 .section__block6 img {
     width: 100%;
+    transition: all 1s linear;
 }
 
+.section__block1 img:hover,
+.section__block2 img:hover,
+.section__block3 img:hover,
+.section__block4 img:hover,
+.section__block5 img:hover,
+.section__block6 img:hover {
+    transform: scale(.9);
+}
 
 
 
@@ -322,7 +334,23 @@ li:hover>.nav__ul_item {
 .block6__payment_none {
     display: none;
     color: #fff;
+}
 
+.block1__material_none>label,
+.block2__furniture_none>label,
+.block3__3d_none>label,
+.block4__delivery_none>label,
+.block5__guarantee_none>label,
+.block6__payment_none>label {
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    right: .5em;
+    font-family: "Gill Sans", arial, sans-serif
+}
+
+#close:checked~.block1__material_none {
+    display: none;
 }
 
 #material:checked~.block1__material_none,
@@ -340,6 +368,7 @@ li:hover>.nav__ul_item {
     background-color: #000;
     opacity: 0.8;
     padding-bottom: 5%;
+
 }
 
 #services__content h1,
@@ -354,9 +383,9 @@ li:hover>.nav__ul_item {
 
 }
 
-/* конец описания преимущества*/
+                                                        /* конец описания преимущества*/
 
-/*начало описания свойств "каталог"*/
+                                                    /*начало описания свойств "каталог"*/
 
 #catalog__content h1,
 #kichen h1,
@@ -381,6 +410,31 @@ li:hover>.nav__ul_item {
     height: auto;
     margin: 30px 0 0 20px;
 
+}
+
+.article1__section1_kichen,
+.article1__section2_kichen,
+.article1__section3_kichen,
+.article1__section4_kichen,
+.article2__section1_child,
+.article2__section2_child,
+.article2__section3_child,
+.article2__section4_child,
+.article2__section5_child,
+.article2__section6_child,
+.article3__section1_bedroom,
+.article3__section2_bedroom,
+.article3__section3_bedroom,
+.article3__section4_bedroom,
+.article4__section1_hallway,
+.article4__section2_hallway,
+.article4__section3_hallway,
+.article5__section1_wardrobe,
+.article5__section2_wardrobe,
+.article5__section3_wardrobe,
+.article5__section4_wardrobe,
+.article5__section5_wardrobe {
+    transition: all .5s linear;
 }
 
 .article1__section1_kichen:hover,
@@ -426,33 +480,47 @@ li:hover>.nav__ul_item {
     margin-bottom: 0px;
 }
 
-/*конец описания свойств "каталог"*/
+                                                        /*конец описания свойств "каталог"*/
 
-/*начало описания свойств "акции"*/
+                                                        /*начало описания свойств "акции"*/
 
-#discount__content img:nth-of-type(1), #discount__content img:nth-of-type(5)  {
+#discount__content img:nth-of-type(1),
+#discount__content img:nth-of-type(5) {
     width: 60%;
     margin: 5% 20%;
     height: auto;
 }
+
+#discount__content img:nth-of-type(odd):hover {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 0 50px #000;
+}
+
 #discount__content img {
     width: 80%;
-    margin: 20px 10%;
-    box-shadow:  0 0 20px #696969;
-  }
-
-#discount__content p {
-        margin: 50px auto 0px;
+    margin: 30px 10%;
+    box-shadow: 0 0 20px #696969;
+    transition: all .5s ease;
 }
+
+#discount__content img:nth-of-type(even):hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 0 50px #000;
+}
+
+#discount__content h1 {
+    margin: 50px auto 0px;
+}
+
 #discount__content>iframe {
     width: 60%;
     margin: 10px 20%;
     height: 500px;
 }
 
-/*конец описания свойств "акции"*/
+                                                /*конец описания свойств "акции"*/
 
-/*задаем свойства главной страницы */
+                                                /*задаем свойства главной страницы */
 
 #gallery {
     margin: 20px 10% 50px;
@@ -752,7 +820,7 @@ h2 {
 
 }
 
-/* задаем свойства подвалу*/
+                                                        /* задаем свойства подвалу*/
 
 .footer {
     background-color: rgba(196, 176, 167, .6);
@@ -780,7 +848,7 @@ h2 {
     content: "f ";
 }
 
-
+                            /* создаем медиазапрос с медиаусловием максимальная ширина экрана 320рх*/
 @media screen and (max-width: 320px) {
     .header__name_text {
         font-size: 20px;
@@ -788,9 +856,10 @@ h2 {
     .nav__ul_item {
         display: none;
     }
-     .nav__ul li:hover .nav__ul_item {
-        display: none;}
-        
+    .nav__ul li:hover .nav__ul_item {
+        display: none;
+    }
+
     header>.header__number_text {
         font-size: 20px;
         margin-left: 0;
@@ -843,9 +912,11 @@ h2 {
     #contacts__content>iframe {
         width: 100%;
     }
-
+    #discount__content h1 {
+        font-size: 14px;
+    }
 }
-
+                                    /* создаем медиазапрос с медиаусловием максимальная ширина экрана 480рх*/
 @media screen and (max-width: 480px) {
     .header__name_text {
         font-size: 40px;
@@ -870,9 +941,9 @@ h2 {
         width: 100%;
         padding: 0;
     }
- .nav__ul li:hover .nav__ul_item {
+    .nav__ul li:hover .nav__ul_item {
         display: none;
- }
+    }
     .article__section_1,
     .article__section_2,
     .article__section_3,
@@ -1045,9 +1116,11 @@ h2 {
     #contacts__content>iframe {
         width: 100%;
     }
-
+    #discount__content h1 {
+        font-size: 18px;
+    }
 }
-
+                                /* создаем медиазапрос с медиаусловием максимальная ширина экрана 720рх*/
 @media screen and (max-width: 720px) {
     .header__number_text {
         float: none;
@@ -1190,6 +1263,14 @@ h2 {
     .block6__payment_none h1 {
         color: #fff;
     }
+    .block1__material_none>label,
+    .block2__furniture_none>label,
+    .block3__3d_none>label,
+    .block4__delivery_none>label,
+    .block5__guarantee_none>label,
+    .block6__payment_none>label {
+        display: none;
+    }
 
 
     #catalog__content img,
@@ -1245,17 +1326,29 @@ h2 {
     #contacts__content>iframe {
         width: 100%;
     }
-
+    #discount__content h1 {
+        font-size: 22px;
+    }
 }
-
-@media screen and (min-width: 721px) and (max-width: 850px) {
-    #children_furniture .block_right_catalog{
+                            /* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 800рх*/
+@media screen and (min-width: 721px) and (max-width: 800px) {
+    #children_furniture .block_right_catalog {
         font-size: 11.5px;
     }
     .block__article2 .block_right_catalog {
         font-size: 12px;
     }
 }
+                             /* создаем медиазапрос с медиаусловием минимальная ширина 801рх и максимальная ширина экрана 850рх*/
+@media screen and (min-width: 801px) and (max-width: 850px) {
+    #children_furniture .block_right_catalog {
+        font-size: 13.5px;
+    }
+    .block__article2 .block_right_catalog {
+        font-size: 13.5px;
+    }
+}
+                                     /* создаем медиазапрос с медиаусловием минимальная ширина 721рх и максимальная ширина экрана 1350рх*/
 @media screen and (min-width: 721px) and (max-width: 1350px) {
     .header__name_text {
         margin: 5px 0 2px 20px;
@@ -1263,7 +1356,7 @@ h2 {
 
 
     }
-        .header:hover .header__number_text {
+    .header:hover .header__number_text {
         transform: none;
         transition: none;
     }
@@ -1331,12 +1424,12 @@ h2 {
     #wardrobe img {
         width: 35%;
         margin-top: 10px;
-        
+
 
     }
-   .block_right_catalog {
+    .block_right_catalog {
         color: #000;
-margin-top: 10px;
+        margin-top: 10px;
     }
     p {
         font-size: 18px;
