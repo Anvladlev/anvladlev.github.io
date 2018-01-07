@@ -554,6 +554,7 @@ li:hover>.nav__ul_item {
 
 #discount__content h1 {
     margin: 50px auto 0px;
+    text-align: center;
 }
 
 #discount__content>iframe {
@@ -883,7 +884,7 @@ h2 {
 
 }
 
-                                                                            * задаем свойства подвалу*/
+                                                                          /* задаем свойства подвалу*/
 
 .footer {
     background-color: rgba(196, 176, 167, .6);
@@ -917,12 +918,6 @@ h2 {
 @media screen and (max-width: 320px) {
     .header__name_text {
         font-size: 20px;
-    }
-    .nav__ul_item {
-        display: none;
-    }
-    .nav__ul li:hover .nav__ul_item {
-        display: none;
     }
 
     header>.header__number_text {
@@ -991,28 +986,12 @@ h2 {
     .header__name_text {
         font-size: 40px;
     }
-
-    /*.nav__ul_item {
-        display: none;
-    }*/
     .header__number_text {
         float: none;
         font-size: 30px;
-  /*      -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none;*/
+
     }
-    .header:hover .header__number_text {
-     /*   -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none;*/
-    }
+ 
     .nav__ul li {
         display: block;
         font-size: 20px;
@@ -1022,39 +1001,7 @@ h2 {
     .nav__ul li:hover .nav__ul_item {
         display: none;
     }
-/*    .article__section_1,
-    .article__section_2,
-    .article__section_3,
-    .article__section_4,
-    .article__section_5,
-    .article__section_6,
-    .article__section_7 {
-        display: block;
-        margin-left: 5%;
-        width: 90%;
 
-    }*/
-    .article__section_1 {
-        background: #532a2a;
-    }
-    .article__section_2 {
-        background: #f5f5f5;
-    }
-    .article__section_3 {
-        background: #dcdcdc;
-    }
-    .article__section_4 {
-        background: #d3d3d3;
-    }
-    .article__section_5 {
-        background: #c0c0c0;
-    }
-    .article__section_6 {
-        background: #a9a9a9;
-    }
-    .article__section_7 {
-        background: #808080;
-    }
     .article_gradient {
         background: none;
         display: flex;
@@ -1062,18 +1009,6 @@ h2 {
     }
     .article_gradient section {
         width: 90%;
-    }
-    .article {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin: auto;
-        width: 90%;
-
     }
     .article__section_2:before,
     .article__section_3:before,
@@ -1099,12 +1034,10 @@ h2 {
         width: calc(100% - 20px);
 
     }
-    .carousel__button_right {
-        position: relative;
-        right: -5%;
-        top: 50px;
+#gallery {
+    display: none;
 
-    }
+}
     .carousel__li {
         width: 2%;
     }
@@ -1136,35 +1069,6 @@ h2 {
 
     }
     .catalog__content>h1 {
-        color: #fff;
-    }
-
-    .block1__material_none,
-    .block2__furniture_none,
-    .block3__3d_none,
-    .block4__delivery_none,
-    .block5__guarantee_none,
-    .block6__payment_none {
-        background-color: #000;
-        display: block;
-        opacity: 0.8;
-        padding-bottom: 5%;
-
-    }
-    #material:checked~.block1__material_none,
-    #furniture:checked~.block2__furniture_none,
-    #model:checked~.block3__3d_none,
-    #delivery:checked~.block4__delivery_none,
-    #guarantee:checked~.block5__guarantee_none,
-    #payment:checked~.block6__payment_none {
-        display: none;
-    }
-    .block1__material_none h1,
-    .block2__furniture_none h1,
-    .block3__3d_none h1,
-    .block4__delivery_none h1,
-    .block5__guarantee_none h1,
-    .block6__payment_none h1 {
         color: #fff;
     }
 
@@ -1206,14 +1110,6 @@ h2 {
     }
     .contacts {
         margin-top: 5%;
-        width: 100%;
-
-    }
-
-    #contacts__content>iframe {
-        height: 500px;
-        left: 0%;
-        top: 0px;
         width: 100%;
 
     }
