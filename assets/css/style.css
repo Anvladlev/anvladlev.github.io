@@ -570,7 +570,7 @@ li:hover>.nav__ul_item {
                                                         /*задаем свойства главной страницы */
 
 #gallery {
-    margin: 20px 10% 50px;
+    margin: 20px 12.5% 50px;
 }
 
 /* задаем свойства всем абзацам*/
@@ -928,6 +928,10 @@ h2 {
         font-size: 20px;
         margin-left: 0;
     }
+    #gallery {
+    display: none;
+
+}
     form {
         width: 100%;
         margin: 0;
